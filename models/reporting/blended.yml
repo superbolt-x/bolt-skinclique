@@ -1,1 +1,8 @@
 version: 2
+
+sources:
+  - name: azure_raw_superbolt
+    schema: azure_raw_superbolt
+    tables:
+      - name: sales_fact_consolidated
+        identifier: sales_fact_consolidated
