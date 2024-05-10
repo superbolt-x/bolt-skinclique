@@ -17,6 +17,7 @@ spend,
 impressions,
 clicks,
 conversions as purchases,
-conversions_value as revenue
-
+conversions_value as revenue,
+hubspotserviceformsubmission as appointments_requested,
+zenotiapptbooked as appointments_booked
 FROM {{ ref('googleads_performance_by_ad') }}
