@@ -17,5 +17,7 @@ conversions as purchases,
 conversions_value as revenue,
 search_impression_share,
 search_budget_lost_impression_share,
-search_rank_lost_impression_share
+search_rank_lost_impression_share,
+hubspotserviceformsubmission as appointments_requested,
+zenotiapptbooked as appointments_booked
 FROM {{ ref('googleads_performance_by_campaign') }}
