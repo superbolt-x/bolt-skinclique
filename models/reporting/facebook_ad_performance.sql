@@ -25,5 +25,7 @@ impressions,
 link_clicks,
 add_to_cart,
 purchases,
-revenue
+revenue,
+submit_application_total as appointments_requested,
+schedule_total as appointments_booked
 FROM {{ ref('facebook_performance_by_ad') }}
