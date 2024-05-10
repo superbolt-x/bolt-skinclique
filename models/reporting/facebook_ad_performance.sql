@@ -26,6 +26,5 @@ link_clicks,
 add_to_cart,
 purchases,
 revenue,
-submit_application_total as appointments_requested,
-schedule_total as appointments_booked
+"offsite_conversion.custom.665825865439020" as appointments_booked
 FROM {{ ref('facebook_performance_by_ad') }}
