@@ -16,7 +16,7 @@ WITH initial_data as
       {{date_granularity}} as date,
       service_name, service_category, product_name, product_category,
       COUNT(appointment_id) as appointments_requested,
-      COUNT(CASE WHEN appointment_status = 'Confirmed' THEN appointment_id END) as appointments_booked,
+      COUNT(CASE WHEN appointment_status IN ('Confirmed','Closed','Open') THEN appointment_id END) as appointments_booked,
       COUNT(CASE WHEN appointment_cancel_or_no_show_status = 'Fulfilled Appointment' THEN appointment_id END) as visits,
       COALESCE(SUM(total_adjusted_revenue),0) as total_adjusted_revenue,
       COALESCE(SUM(total_revenue),0) as total_revenue
