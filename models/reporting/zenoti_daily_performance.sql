@@ -22,7 +22,7 @@ WITH initial_data as
       COALESCE(SUM(total_adjusted_revenue),0) as total_adjusted_revenue,
       COALESCE(SUM(total_revenue),0) as total_revenue
       FROM initial_data
-      AND center_name !~* 'training' AND service_category !~* 'perks'
+      WHERE center_name !~* 'training' AND service_category !~* 'perks'
       GROUP BY 1,2,3,4,5,6
       {% if not loop.last %}UNION ALL
       {% endif %}
