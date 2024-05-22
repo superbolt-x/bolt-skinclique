@@ -6,3 +6,9 @@ sources:
     tables:
       - name: sales_fact_consolidated
         identifier: sales_fact_consolidated
+
+  - name: gsheet_raw
+    schema: gsheet_raw
+    tables:
+      - name: item_mapping
+        identifier: item_mapping
